@@ -16,3 +16,26 @@ addGroceryInputBox.addEventListener("click", function () {
 
 const groceryList = await GroceryList.getAllGroceryList();
 console.log(groceryList);
+
+const addingGrocery = await addItem("Eggs", "imageString");
+console.log(addingGrocery);
+
+async function addItem(name, imageString) {
+  const response = await fetch(
+    "https://agile-everglades-82259.herokuapp.com/api/v1/grocery/",
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        image: imageString,
+        isBought: false,
+      }),
+    }
+  );
+
+  return response.json();
+}
