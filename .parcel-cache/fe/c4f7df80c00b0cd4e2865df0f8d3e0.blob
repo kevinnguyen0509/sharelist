@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharelist</title>
+    <link rel="icon" href="4a6b1a8cf76e23645fbb1d04d7880484" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="e0c05daae96d8761221cf0f5e7d4fb56">
+
+    <link rel="stylesheet" type="text/css" href="f89a749b4ffc8ed6ed855bb666bc286b">
+    <link rel="stylesheet" type="text/css" href="17719511ded61d46d972ffa6abbadab5">
+  </head>
+
+  <body>
+    <div class="overlay hidden"></div>
+    <nav>
+      <div class="search-bar-container">
+        <input type="text" class="add-item-input" placeholder="Enter a product">
+        <div class="product-image-page hidden"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col-container"></div>
+    </div>
+    <script data-parcel-key="01cc7e7212ec1e84f0b66de999f81907">
+      // if (window.innerWidth < 650) {
+      //   document.write(
+      //     '<script type="text/javascript" src="js/mobile.js"><\/script>'
+      //   );
+      // } else {
+      //   document.write('<script type="module" src="js/script.js"><\/script>');
+      // }
+    </script>
+    <script type="module" src="bae3346e9cdc293b13f0bd9f60962ced"></script>
+  </body>
+</html>

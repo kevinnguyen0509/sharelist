@@ -1,0 +1,24 @@
+var _modelGroceryListModelJs = require("../model/groceryListModel.js");
+var _modelRenderModelJs = require("../model/renderModel.js");
+var _jsUtilsArrayJs = require("../js/utils/array.js");
+// https://agile-everglades-82259.herokuapp.com/
+const overlay = document.querySelector(".overlay");
+const productScrollOverlay = document.querySelector(".product-image-page");
+const addGroceryInputBox = document.querySelector(".add-item-input");
+const groceryListItems = document.querySelector(".col-container");
+// const groceryList = await GroceryList.getAllGroceryList();
+const groceryList = async () => {
+  const result = await _modelGroceryListModelJs.getAllGroceryList();
+  return result;
+};
+(async () => {
+  const groceryList2 = await groceryList();
+  _modelRenderModelJs.allGroceryListItems(groceryList2, groceryListItems);
+})();
+console.log(groceryList);
+_modelRenderModelJs.deleteAllList(addGroceryInputBox, _modelGroceryListModelJs);
+_modelRenderModelJs.allGroceryListItems(groceryList2, groceryListItems);
+let groceryItemClicked = document.querySelectorAll(".item-container");
+_modelRenderModelJs.updatedList(groceryItemClicked, _modelGroceryListModelJs);
+_modelRenderModelJs.dismissOverlay(overlay, productScrollOverlay);
+_modelRenderModelJs.addToDatabase(addGroceryInputBox, overlay, productScrollOverlay, _jsUtilsArrayJs.groceryPictureArray, _modelGroceryListModelJs, groceryListItems);

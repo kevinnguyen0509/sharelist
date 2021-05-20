@@ -1,0 +1,7 @@
+if (window.innerWidth < 650) {
+        document.write(
+          '<script type="text/javascript" src="js/mobile.js"><\/script>'
+        );
+      } else {
+        document.write('<script type="module" src="js/script.js"><\/script>');
+      }

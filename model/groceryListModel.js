@@ -35,4 +35,46 @@ async function addItem(name, imageString) {
   }
 }
 
-export { getAllGroceryList, addItem };
+async function updateItem(id, isBought) {
+  try {
+    const response = await fetch(
+      "https://agile-everglades-82259.herokuapp.com/api/v1/grocery/" + id,
+      {
+        method: "PATCH",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          isBought: isBought,
+        }),
+      }
+    );
+
+    return response.json();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function deleteAll() {
+  try {
+    const response = await fetch(
+      "https://agile-everglades-82259.herokuapp.com/api/v1/grocery/",
+      {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    location.reload();
+    return response.json();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export { getAllGroceryList, addItem, updateItem, deleteAll };

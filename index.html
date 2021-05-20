@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sharelist</title>
+    <link rel="icon" href="./vendor/css/svg/menu.svg" type="image/icon type" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -9,115 +11,33 @@
     />
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/mediaqueries.css" />
   </head>
 
   <body>
     <div class="overlay hidden"></div>
     <nav>
-      <div class="logo">Logo</div>
-
       <div class="search-bar-container">
         <input
           type="text"
           class="add-item-input"
           placeholder="Enter a product"
         />
-        <div class="product-image-page hidden">
-          <div class="search-img-container">
-            <i class="flaticon-cheese flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-apple flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-birthday-cake-1 flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-cherries flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-chocolate flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-coffee-beans flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-coffee-cup-1 flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-ice-cream-4 flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-grapefruit flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-eggs-1 flaticons-search"></i>
-          </div>
-
-          <div class="search-img-container">
-            <i class="flaticon-cookie-2 flaticons-search"></i>
-          </div>
-        </div>
+        <div class="product-image-page hidden"></div>
       </div>
     </nav>
 
     <div class="container">
-      <div class="col-container">
-        <div class="item-container">
-          <i class="flaticon-cheese flaticonss"></i>
-          <p>Cheese</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-avocado flaticonss"></i>
-          <p>Avocado</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-rice flaticonss"></i>
-          <p>Rice</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-noodles flaticonss"></i>
-          <p>Rice</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-beer flaticonss"></i>
-          <p>Cider Beer</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-avocado flaticonss"></i>
-          <p>Avocado</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-birthday-cake flaticonss"></i>
-          <p>Birthday Cake</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-soft-drink-1 flaticonss"></i>
-          <p>coke</p>
-        </div>
-
-        <div class="item-container">
-          <i class="flaticon-syrup flaticonss"></i>
-          <p>Maple syrup</p>
-        </div>
-      </div>
+      <div class="col-container"></div>
     </div>
-    <script type="module" src="js/script.js"></script>
+    <script>
+      if (window.innerWidth < 650) {
+        document.write(
+          '<script type="text/javascript" src="js/mobile.js"><\/script>'
+        );
+      } else {
+        document.write('<script type="module" src="js/script.js"><\/script>');
+      }
+    </script>
   </body>
 </html>
