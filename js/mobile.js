@@ -9,6 +9,7 @@ let groceryList = async () => {
     );
 
     const groceryJson = await allGroceryList.json();
+    groceryJson.groceryList.sort((a, b) => a.isBought - b.isBought);
     return groceryJson.groceryList;
   } catch (err) {
     console.log("Not correct route.");
